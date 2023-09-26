@@ -1,0 +1,58 @@
+<!-- Create a simple page with some div tags and show different ways to add CSS as well as what happens 
+when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the 
+project where required. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- this is internal css using style tag {inline css>internal css>external css} -->
+    <style>
+        *{
+            background-color: azure;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        div{
+            border: 2px solid black;
+            color: rgb(8, 74, 47);
+            background-color: cadetblue;
+        }
+
+        span{
+            color: crimson;         /*  override property*/
+            border: 2px solid black;
+            display: inline-block;
+            background-color: rgb(180, 185, 110);
+            padding: 2%;
+            margin: 2%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="font-size: 54px ; font-family: Times new roman ">Simple Page Using CSS</h1>
+    <div style="display: inline-block;  ">  <!--this is inline css which has more priority then internal and external css -->
+
+        <h1>Hello , My name is shubham ashish</h1>
+
+    </div>
+
+    <div class="css" >
+        <h2>I am Shubham Ashish, a technology enthusiast who is passionate about using technology to make the world a better place. I believe that technology has the power to solve some of the world's most pressing problems, such as climate change, poverty, and disease. I am also excited about the potential of technology to enhance our lives in new and innovative ways.</h2>
+    </div>
+
+    <div>
+    <!-- this is inline css so it has more priority then internal and external thats why the same ement in internal and external css overrides -->
+    <span style="color: rgb(81, 13, 13); font-size: 30px">Inline CSS > Internal CSS > External CSS
+
+        This means that the most specific CSS rule will be applied, and inline CSS is the most specific. </span>  
+    </div>
+</body>
+</html>

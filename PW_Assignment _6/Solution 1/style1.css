@@ -1,0 +1,9 @@
+
+/* EXTERNAL CSS IT HAS LESS PRIORITY THEN INTERNAL AND EXTERNAL CSS
+EXTERNAL CSS < INTERNAL CSS < INLINE CSS */
+
+div{
+    border-radius: 20px;
+    background-color: aquamarine;       /*  override property*/
+     color: blueviolet;                /*  override property*/
+} 
