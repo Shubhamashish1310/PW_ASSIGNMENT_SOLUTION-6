@@ -8,8 +8,213 @@ how to apply opacity to one of the form sections. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+/*INTERNAL CSS*/
+        body{
+            margin: 10px;
+            border: 4px solid black;
+            border-radius: 15px;
+           padding: 10px;
+           display: inline-block;
+           background-color: rgb(50, 166, 211);
+           font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+           
+        }
+
+        .Form__name{
+            margin: 10px;
+            padding: 15px;
+           opacity: 1;
+            background-color: violet;
+            border: 3px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+            
+        }
+        .Form__lastname{
+margin: 10px;
+            padding: 15px;
+           
+            background-color: indigo;
+            border: 3px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            opacity: 0.3;                  /* this is 50% opacity HERE OPACCITY 0.5 TO 1 i.e 50% to 100%*/
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+            
+        }
+        .Form__email{
+            margin: 10px;
+            padding: 15px;
+           
+            background-color: blue;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+        .Form__password{
+               margin: 10px;
+            padding: 15px;
+           
+            background-color: green;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder; 
+        }
+         .Form__Confirmpassword{
+
+            margin: 10px;
+            padding: 15px;
+           
+            background-color: yellow;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+        .Form__age{
+margin: 10px;
+            padding: 15px;
+           
+            background-color: orange;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+        }
+        .Form__gender{
+margin: 10px;
+            padding: 15px;
+           
+            background-color: red ;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+            
+        }
+        .Form__tc{
+margin: 10px;
+            padding: 15px;
+           
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder;
+            
+        }
+        .Form__button--submitvalue{
+            opacity: 100%;
+            width: 289px;
+            font-size: 20px;
+            font-family: cursive;
+            font-weight: bolder; 
+        }
+        
+        input[type="submit"]{
+        font-size: 20px;
+        font-family: cursive;
+        font-weight: bolder; 
+        background-color: rgb(232, 253, 0);
+        }
+        input[type="reset"]{
+        font-size: 20px;
+        font-family: cursive;
+        font-weight: bolder; 
+        background-color: rgb(0, 249, 79);
+        }
+/*background color for input fields*/
+        input{
+            background-color: rgb(255, 0, 136);
+            font-size: 20px;
+
+          }
+    </style>
 </head>
 <body>
+    <h1>HTML FORM</h1>
+    <form action="no action">   <!-- for backend storage  --> 
+  
+          <label for="FirstName"> 
+              <div class="Form__name">
+                  First Name:  <input type="text"  id="FirstName" minlength="3" max="25" placeholder="Shubham" required>
+              </div>
+          </label>
+          <br>
+          <label for="LastName">
+              <div class="Form__lastname">
+                  Last Name: <input type="text"  id="LastName" minlength="3" max="25" placeholder="Ashish">
+              </div>
+          </label>
+          <br>
+          <label for="Email">
+              <div class="Form__email">
+                 Email: <input type="email" name="Enteremail" id="Email"  placeholder="shubham.ashish13@gmail.com" required/>
+              </div>
+              
+          </label>
+          <br>
+          <label for="Password">
+              <div class="Form__password">
+                 Password: <input type="password" name="EnterPassword" id="Email" minlength="8" max="20" placeholder="**********" required/>
+              </div>
+          </label>
+  <br>
+          <label for="ConfirmPassword">
+            <div class="Form__Confirmpassword">
+                Confirm Password: <input type="password" name="Confirm Password" id="ConfirmPassword" minlength="8" max="20" placeholder="**********" required/>  <!-- required are used beacuse field is important -->
+              </div>
+          </label>
+  <br>
+          <label for="Age">
+              <div class="Form__age">
+                 Age: <input type="number" name="Enteremail" id="Age" required min="0" max="150" placeholder="22">
+              </div>
+              
+          </label>
+          <br>
+          <label for="Gender">
+             <div class="Form__gender">
+                 Gender:    Male<input type="radio" name="genderpls" id="Gender" > female<input type="radio" name="genderpls" id="Gender"/> Others<input type="radio" name="genderpls" id="Gender" required/> 
+              </div>
+              
+          </label>
+          <br>
+          <label for="Termsand condition">
+              <div class="Form__tc">
+                Terms and Condition : <input type="checkbox" name="check the box" id="Termsand condition"  required >     I Agree to Terms and Conditions>   </div>
+              
+          </label>
+         
+          <div class="Form__button--submit">
+              <input type="submit" value="Submit "  >
+         
+         
+              <input type="reset" value="reset" >
     
+            </div>
+      </form>
 </body>
 </html>
