@@ -7,34 +7,41 @@ project where required. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Different Ways to Add CSS</title>
 
-    <link rel="stylesheet" href="style1.css">
+    <!-- using this way we can add external css  -->
+    <link rel="stylesheet" href="style1.css"> 
 
     <!-- this is internal css using style tag {inline css>internal css>external css} -->
     <style>
         *{
-            background-color: azure;
-            padding: 10px;
+            background-color: rgb(213, 251, 255);
+            border-color: black;
+            padding: 5px;
             margin: 10px;
-            font-family: fantasy;
+            font-family: cursive;
+            font-size: 20px;
+           
         }
         
+        /*inline css*/
         div{
             border: 2px solid black;
-            color: rgb(8, 74, 47);
-            background-color: cadetblue;
+            color: rgb(0, 82, 48);
+            border: 2px solid black;
+            opacity: 1;
         }
 
         span{
-            color: crimson;         /*  override property*/
+            color: rgb(191, 255, 0);         /* overridden by another CSS property, override property*/
             border: 2px solid black;
             display: inline-block;
-            background-color: rgb(180, 185, 110);
+            background-color: rgb(238, 255, 0);
             padding: 2%;
             margin: 2%;
         }
     </style>
+    
 
 </head>
 <body>
@@ -42,6 +49,15 @@ project where required. -->
     <div style="display: inline-block;  ">  <!--this is inline css which has more priority then internal and external css -->
 
         <h1>Hello , My name is shubham ashish</h1>
+        <p>When you target the same elements with inline, internal, and external CSS, the following happens:
+
+            <ul>
+            <li>The inline CSS will have the highest priority and will override the internal and external CSS.</li>
+            <li>The internal CSS will have the second highest priority and will override the external CSS, but not the inline CSS.</li>
+            <li>The external CSS will have the lowest priority and will be overridden by the internal and inline CSS.</li>
+          
+        </ul>
+    </p>
 
     </div>
 
